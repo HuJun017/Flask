@@ -1,16 +1,21 @@
 <html>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type=text/javascript src="{{url_for('static', filename='js/IMC.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/IMC.css') }}">
       
     <head>
-        <title>IMC</title>
+        <title>{{ Titolo }}</title>
     </head>
     <body>
-        <h1>Calcola qui il tuo IMC</h1>
+        <h1>{{ Descrizione }}</h1>
         <input type="text" id="altezza">
         <input type="text" id="peso">
-        <button onclick="calcola_IMC()">Calcola</button>
-        <p id="testo">Risultato</p>
-        <p id="tipo">Tipo</p>
+        <button onclick="calcola_IMC()">{{ Calcola }}</button>
+        <div>
+            <p class="elemento1">{{txt}}</p>
+            <p id="testo" class="elemento2">{{ Risultato }}</p>
+        </div>
+
+        <p id="tipo">{{ Tipo }}</p>
     </body>
 </html>

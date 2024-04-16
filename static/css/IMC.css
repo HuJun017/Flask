@@ -1,0 +1,8 @@
+.container {
+    text-align: center;
+}
+  
+.elemento1, .elemento2 {
+    display: inline-block;
+}
+  
