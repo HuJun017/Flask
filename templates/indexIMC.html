@@ -1,21 +1,33 @@
 <html>
+    <!--Script e Collegamenti-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type=text/javascript src="{{url_for('static', filename='js/IMC.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/IMC.css') }}">
-      
+    <script>
+        let txt_imc = "{{ txt_imc }}";
+        let txt = "{{ txt }}";
+        let sottopeso = "{{ sottopeso }}";
+        let normopeso = "{{ normopeso }}";
+        let sovrappeso = "{{ sovrappeso }}";
+        let obeso = "{{ obeso }}";
+    </script>
+    <!--Head-->
     <head>
         <title>{{ Titolo }}</title>
     </head>
+    <!--Pagina-->
     <body>
         <h1>{{ Descrizione }}</h1>
         <input type="text" id="altezza">
         <input type="text" id="peso">
-        <button onclick="calcola_IMC()">{{ Calcola }}</button>
         <div>
-            <p class="elemento1">{{txt}}</p>
-            <p id="testo" class="elemento2">{{ Risultato }}</p>
+            <button onclick="calcola_IMC()">{{ Calcola }}</button>            
         </div>
-
-        <p id="tipo">{{ Tipo }}</p>
+        <div>
+            <p id="testo">{{ Risultato }}</p>
+        </div>
+        <div>
+            <p id="tipo">{{ Tipo }}</p>            
+        </div>
     </body>
 </html>

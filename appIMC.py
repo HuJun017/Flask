@@ -10,7 +10,13 @@ def calcola_IMC_en():
     Descrizione = "Calculate here your BMI", 
     Calcola = "Calculate",  
     Risultato = "Result", 
-    Tipo = "Type")
+    Tipo = "Type",
+    txt_imc = "Your BMI is ",
+    txt = "You are ",
+    sottopeso = "Underweight",
+    normopeso = "Normal Weight",
+    sovrappeso = "Overweight",
+    obeso = "Obese")
 
 @app.route('/it')
 def calcola_IMC_it():
@@ -19,7 +25,13 @@ def calcola_IMC_it():
     Descrizione = "Calcola qui il tuo IMC", 
     Calcola = "Calcola",  
     Risultato = "Risultato", 
-    Tipo = "Tipo")
+    Tipo = "Tipo",
+    txt_imc = "Il tuo IMC è ",
+    txt = "Tu sei ",
+    sottopeso = "Sottopeso",
+    normopeso = "Normopeso",
+    sovrappeso = "Sovrappeso",
+    obeso = "Obeso")
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
