@@ -8,7 +8,7 @@
     <body>
         <h1>Regioni</h1>
         {% for regione in regioni %}
-            <p>{{ regione }}</p>
+            <a href="/info/{{regione}}">{{ regione }}</a><br />
         {% endfor %}
     </body>
 </html>
