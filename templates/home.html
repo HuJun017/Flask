@@ -1,10 +1,11 @@
 <html>
+    <script type=text/javascript src="{{url_for('static', filename='js/es.js') }}"></script>
     <head>
-        <script type=text/javascript src="{{url_for('static', filename='js/es.js') }}"></script>
-        <title>Benvenuti</title>
+        <title>Welcome</title>
+        
     </head>
     <body>
-        <button onclick="getElenco">elenco regioni</button>
+        <button onclick="getElenco()"></button>
         <p id="elenco"></p>
     </body>
 </html>
