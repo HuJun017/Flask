@@ -36,4 +36,4 @@ def info(nomeRegione):
     return render_template('json.html', tabella = info.to_json())
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=3246, debug=True)
+  app.run(host='0.0.0.0', port=3245, debug=True)
