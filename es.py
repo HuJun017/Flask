@@ -25,7 +25,8 @@ def homepage():
 def elenco():
     import pandas as pd
     df = pd.read_csv('/workspace/Flask/data/regioni.csv')
-    info = df.nome_regione
+    info = df.nome_regione.sort_values()
+    info.reset_index(drop=True, inplace=True)
     return render_template('json.html', tabella = info.to_json())
 
 @app.route('/info/<nomeRegione>')
@@ -33,7 +34,7 @@ def info(nomeRegione):
     import pandas as pd
     df = pd.read_csv('/workspace/Flask/data/regioni.csv')
     info = df[df.nome_regione == nomeRegione]
-    return render_template('json.html', tabella = info.to_json())
+    return render_template('json.html', tabella = info.to_html())
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
